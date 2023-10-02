@@ -89,9 +89,25 @@
                       <div class="dropdown-divider my-1"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="javascript:void(0);">
+                      <a class="dropdown-item" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+
+
+
                         <i class="mdi mdi-power me-1 mdi-20px"></i>
-                        <span class="align-middle">Log Out</span>
+                         {{ __('Logout') }}
+                        {{-- <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a> --}}
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                        {{-- <a class="dropdown-item pb-2 mb-1" href="{{ route('logout') }}"><span class="align-middle">Log Out</span></a> --}}
+
                       </a>
                     </li>
                   </ul>

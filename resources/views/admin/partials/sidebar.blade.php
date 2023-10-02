@@ -76,8 +76,8 @@
     <ul class="menu-inner py-1">
 
       <li class="menu-header small text-uppercase"><span class="menu-header-text">Dashboard</span></li>
-      <li class="menu-item {{ (request()->is('dashboard*')) ? 'active open' : '' }} ">
-        <a href="{{ url('/dashboard') }}" class="menu-link">
+      <li class="menu-item {{ (request()->is('/admin/dashboard*')) ? 'active open' : '' }} ">
+        <a href="{{ url('/admin/dashboard') }}" class="menu-link">
           <i class="menu-icon tf-icons mdi mdi-credit-card-outline"></i>
           <div data-i18n="Basic">Dashboard</div>
         </a>
